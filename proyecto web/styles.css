@@ -1,0 +1,284 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Estilos del Header */
+header {
+    background-color: #2c3e50;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+/* Asegúrate de que el contenedor del navbar use flexbox */
+.navbar-collapse {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+/* Estilo específico para el botón */
+.btn {
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row; /* Asegura que los enlaces sean horizontales en pantallas grandes */
+    gap: 30px; /* Espacio entre los enlaces */
+
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2em;
+    color: #e74c3c;
+    text-decoration: none;
+    display:flexbox;
+    text-shadow: 2px 2px black;
+}
+
+.navbar-brand:hover {
+    color: #27e750;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e74c3c;
+    border-bottom: 2px #fff solid;
+}
+
+.navbar-toggler {
+    border-color: transparent;
+    color: #fff;
+}
+
+
+
+/* Estilos de Botones */
+.btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff7675;
+    transform: scale(1.05);
+}
+
+/* Sección Principal */
+.seccion-principal {
+    background: url('img/hero.png') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contenido-principal {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contenido-principal h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #e74c3c;
+    text-transform: uppercase;
+}
+
+.contenido-principal p {
+    font-size: 1.5em;
+    margin: 20px 50px;
+}
+
+.contenido-principal .btn-primario {
+    margin: 100px;
+    text-decoration: none;
+}
+
+/* Sección de Búsqueda */
+.seccion-busqueda {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-seccion h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion p {
+    margin-bottom: 30px;
+}
+
+/* Estilos del Formulario */
+.formulario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin: auto;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grupo-formulario label {
+    margin-bottom: 5px;
+}
+
+.grupo-formulario input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Sección de Planes */
+.seccion-planes {
+    padding: 60px 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.grid-planes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin: 15%;
+}
+
+.plan {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.plan h3 {
+    margin: 15px 0;
+}
+
+/* Estilo del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenido-modal {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover, .cerrar:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* Estilos del Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+    }
+    .btn{
+        margin-left: 15px;
+        padding: 8px 25px;
+        border-radius: 5px;
+    }
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+}
