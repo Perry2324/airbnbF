@@ -275,17 +275,68 @@ footer a:hover {
 }
 
 /* Responsive Styles */
+/* Ajustes adicionales para dispositivos móviles */
 @media (max-width: 991px) {
-    .navbar-nav .nav-link {
-        margin: 10px 0;
+    /* Navbar */
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .btn{
-        margin-left: 15px;
-        padding: 8px 25px;
-        border-radius: 5px;
-    }
-    .btn-primary {
+    
+    .navbar-nav {
+        flex-direction: column;
         width: 100%;
+        align-items: flex-start;
+        gap: 10px; /* Reducir espacio entre enlaces en móvil */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Botón */
+    .btn {
+        width: 100%; /* Asegura que el botón ocupe el ancho completo */
         text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Sección Principal */
+    .seccion-principal {
+        height: auto; /* Permite que el contenido ajuste la altura en móvil */
+        padding: 40px 20px; /* Aumenta padding en móvil */
+    }
+
+    .contenido-principal {
+        padding: 30px 20px;
+    }
+
+    .contenido-principal h1 {
+        font-size: 2em; /* Reduce el tamaño de fuente en móvil */
+    }
+
+    .contenido-principal p {
+        font-size: 1.2em; /* Reduce el tamaño de fuente del párrafo */
+        margin: 20px 0;
+    }
+
+    /* Formulario en la sección de búsqueda */
+    .formulario-grid {
+        grid-template-columns: 1fr; /* Coloca todos los elementos en una sola columna */
+        gap: 10px;
+    }
+
+    /* Sección de Planes */
+    .grid-planes {
+        grid-template-columns: 1fr; /* Cada plan ocupa el ancho completo */
+        margin: 0; /* Ajusta los márgenes en móvil */
+        padding: 0;
+    }
+
+    /* Modal */
+    .contenido-modal {
+        width: 90%; /* Ocupa el 90% del ancho de la pantalla en móviles */
     }
 }
