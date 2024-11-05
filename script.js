@@ -5,23 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const descripcionPlan = document.getElementById('descripcion-plan');
     
     // Código del modal
-    botonesDetalles.forEach(boton => {
-        boton.addEventListener('click', (e) => {
-            const tipoPlan = e.target.closest('.plan').dataset.plan;
-            mostrarDetallesPlan(tipoPlan);
-            modal.style.display = 'block';
+    if (botonesDetalles.length > 0 && modal && descripcionPlan) {
+        botonesDetalles.forEach(boton => {
+            boton.addEventListener('click', (e) => {
+                const tipoPlan = e.target.closest('.plan').dataset.plan;
+                mostrarDetallesPlan(tipoPlan);
+                modal.style.display = 'block';
+            });
         });
-    });
-    
-    botonCerrar.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-    
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
+        
+        if (botonCerrar) {
+            botonCerrar.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
         }
-    });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
     
     function mostrarDetallesPlan(tipoPlan) {
         let descripcion;
@@ -45,7 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    }
 });

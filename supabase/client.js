@@ -1,0 +1,2 @@
+import { createClient } from 'jsr:@supabase/supabase-js@2'
+createClient("https://zelrqvxnlmzzzzqgyjdc.supabase.co","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InplbHJxdnhubG16enp6cWd5amRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzA2ODUxMTYsImV4cCI6MjA0NjI2MTExNn0.3Msyq3jxqMU3wXN6dYOx_OuCXPsB0MeC0xNx-Jb4hYQ")
