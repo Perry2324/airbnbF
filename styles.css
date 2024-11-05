@@ -90,6 +90,16 @@ header {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.btn-secundario{
+    background-color: #e74c3c;
+    color: white;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 3s ease, transform 0.3s ease;
+}
 .btn:hover {
     background-color: #ff7675;
     transform: scale(1.05);
@@ -126,10 +136,7 @@ header {
     margin: 20px 50px;
 }
 
-.contenido-principal .btn-primario {
-    margin: 100px;
-    text-decoration: none;
-}
+
 
 /* Sección de Búsqueda */
 .seccion-busqueda {
