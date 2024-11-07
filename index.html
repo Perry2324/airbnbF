@@ -27,7 +27,7 @@
                         <a class="nav-link" href="#planes">Planes</a>
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </div>
-                    <button class="btn btn-primary btn-sm " type="button">Iniciar sesión</button>
+                    <button class="btn btn-primary btn-sm " type="button">Mis Viajes</button>
                 </div>
             </div>
         </nav>
@@ -42,9 +42,45 @@
         </div>
     </section>
 
+
+    <section id="vuelos" class="p-4">
+        <div class="container">
+            <div class="d-flex justify-content-center gap-3 mb-4">
+                <button class="btn btn-link">Vuelos</button>
+                <button class="btn btn-link">Hoteles</button>
+                <button class="btn btn-link">Paquetes</button>
+                <button class="btn btn-link">Autos</button>
+                <button class="btn btn-link">Marriott Bonvoy</button>
+                <button class="btn btn-link">Hoteles por horas</button>
+            </div>
+            <form id="formulario-vuelos" class="d-flex justify-content-center gap-3">
+                <div class="form-group card p-3">
+                    <label for="origen" class="form-label"><i class="bi bi-geo-alt"></i> Origen</label>
+                    <input type="text" id="origen" class="form-control" placeholder="Ciudad de origen" required>
+                </div>
+                <div class="form-group card p-3">
+                    <label for="destino" class="form-label"><i class="bi bi-geo"></i> Destino</label>
+                    <input type="text" id="destino" class="form-control" placeholder="Ciudad de destino" required>
+                </div>
+                <div class="form-group card p-3">
+                    <label for="fecha-ida" class="form-label"><i class="bi bi-calendar"></i> Ida</label>
+                    <input type="date" id="fecha-ida" class="form-control" required>
+                </div>
+                <div class="form-group card p-3">
+                    <label for="fecha-vuelta" class="form-label"><i class="bi bi-calendar"></i> Vuelta</label>
+                    <input type="date" id="fecha-vuelta" class="form-control" required>
+                </div>
+                <div class="form-group card p-3">
+                    <label for="pasajeros" class="form-label"><i class="bi bi-person"></i> Pasajeros y clase</label>
+                    <input type="text" id="pasajeros" class="form-control" placeholder="1 Pasajero, Económica" required>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <!-- Sección de búsqueda de vuelos -->
     <section id="vuelos" class="seccion-busqueda">
-        <div class="titulo-seccion">
+        <div class="form-busqueda1">
             <h2>Reserva tus vuelos</h2>
             <p>Encuentra las mejores tarifas para tus destinos favoritos.</p>
         </div>
@@ -137,7 +173,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 </body>
 </html>
