@@ -5,16 +5,32 @@
     box-sizing: border-box;
 }
 
+/* Variables CSS */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #ecf0f1;
+    --font-family: 'Poppins', sans-serif;
+    --font-color: #2c3e50;
+    --highlight-color: #e74c3c;
+    --line-height: 1.6;
+    --container-max-width: 1000px;
+    --form-group-max-width: 180px;
+    --form-label-font-weight: 600;
+    --form-label-font-size: 0.9rem;
+}
+
+/* Estilos generales */
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: var(--font-family);
+    color: var(--font-color);
+    line-height: var(--line-height);
+    background-color: var(--background-color);
 }
 
 /* Estilos del Header */
 header {
-    background-color: #97b9db;
+    background-color: var(--primary-color);
     position: fixed;
     width: 100%;
     top: 0;
@@ -22,20 +38,22 @@ header {
     z-index: 1000;
 }
 
+/* Contenedor de Vuelos */
 #vuelos .container {
-    max-width: 1000px;
+    max-width: var(--container-max-width);
 }
 
+/* Formulario de Vuelos */
 #formulario-vuelos .form-group {
     width: 100%;
-    max-width: 180px;
+    max-width: var(--form-group-max-width);
     text-align: center;
     border-radius: 10px;
 }
 
 #formulario-vuelos .form-label {
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: var(--form-label-font-weight);
+    font-size: var(--form-label-font-size);
 }
 
 #formulario-vuelos input {
@@ -83,14 +101,13 @@ header {
 .navbar-brand {
     font-weight: bold;
     font-size: 2em;
-    color: #e74c3c;
+    color: var(--highlight-color);
     text-decoration: none;
-    display:flexbox;
     text-shadow: 2px 2px black;
 }
 
 .navbar-brand:hover {
-    color: #59e73c;
+    color: var(--secondary-color);
 }
 
 .navbar-nav .nav-link {
@@ -101,7 +118,7 @@ header {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #e74c3c;
+    color: var(--highlight-color);
     border-bottom: 2px #fff solid;
     transition: 0.3s ease;
 }
@@ -117,9 +134,9 @@ header {
 
 /* Estilos de Botones */
 .btn {
-    background-color: #3ce78c00;
+    background-color: var(--secondary-color);
     color: white;
-    border: px black solid;
+    border: none;
     padding: 8px 25px;
     border-radius: 5px;
     cursor: pointer;
@@ -129,7 +146,7 @@ header {
 }
 
 .btn-secundario {
-    background-color: #e74c3c;
+    background-color: var(--highlight-color);
     color: white;
     padding: 10px 30px;
     margin: auto;
@@ -137,19 +154,12 @@ header {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
-    transition: background-color 3s ease, transform 0.3s ease;
-}
-
-:root {
-    --primary-color: #ff7675;
-    --secondary-color: #410404;
-    --white-color: #fff;
+    transition: background-color 0.5s ease, transform 0.3s ease;
 }
 
 .btn:hover {
     background-color: var(--primary-color);
     transform: scale(1.05);
-    transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 
@@ -184,7 +194,7 @@ header {
 .contenido-principal h1 {
     font-size: 3.5em;
     margin-bottom: 20px;
-    color: #e74c3c;
+    color: var(--highlight-color);
     text-transform: uppercase;
 }
 
@@ -194,7 +204,7 @@ header {
 }
 
 .btn-primario.detalles-plan {
-    background-color: #e74c3c;
+    background-color: var(--highlight-color);
     color: white;
     padding: 10px 30px;
     margin: auto;
@@ -202,14 +212,14 @@ header {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
-    transition: background-color 3s ease, transform 0.3s ease;
+    transition: background-color 0.5s ease, transform 0.3s ease;
 }
 
 /* Sección de Búsqueda */
 .seccion-busqueda {
     padding: 60px 20px;
     text-align: center;
-    background-color: #ecf0f1;
+    background-color: var(--background-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: auto;
 }
@@ -322,7 +332,7 @@ header {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #2c3e50;
+    background-color: var(--primary-color);
     color: white;
     position: relative;
     bottom: 0;
@@ -335,7 +345,7 @@ footer p {
 }
 
 footer a {
-    color: #e74c3c;
+    color: var(--highlight-color);
     text-decoration: none;
 }
 
