@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">TuViaje</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,12 +25,11 @@
                         <a class="nav-link" href="#planes">Planes</a>
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </div>
-                    <button class="btn btn-primary btn-sm" type="button" onclick="window.location.href='Login.html'">Mis Viajes</button>
                 </div>
             </div>
         </nav>
-        
     </header>
+
     <!-- Sección principal -->
     <section id="inicio" class="seccion-principal">
         <div class="contenido-principal">
@@ -40,67 +39,38 @@
         </div>
     </section>
 
-
-    <section id="opciones" class="p-4">
-        <div class="container">
-            <div class="d-flex justify-content-center gap-3 mb-4">
-                <button class="btn btn-link opcion" data-opcion="vuelos">Vuelos</button>
-                <button class="btn btn-link opcion" data-opcion="hoteles">Hoteles</button>
-            </div>
-    
-            <!-- Formulario para Vuelos -->
-            <form id="formulario-vuelos" class="formulario d-flex justify-content-center gap-3 active">
-                <div class="form-group card p-3">
-                    <label for="origen" class="form-label"><i class="bi bi-geo-alt"></i> Origen</label>
-                    <input type="text" id="origen" class="form-control" placeholder="Ciudad de origen" required>
-                </div>
-                <!-- Otros campos del formulario de vuelos -->
-            </form>
-    
-            <!-- Formulario para Hoteles -->
-            <form id="formulario-hoteles" class="formulario d-flex justify-content-center gap-3">
-                <div class="form-group card p-3">
-                    <label for="destino-hotel" class="form-label"><i class="bi bi-geo-alt"></i> Destino</label>
-                    <input type="text" id="destino-hotel" class="form-control" placeholder="Ciudad o destino" required>
-                </div>
-                <!-- Otros campos del formulario de hoteles -->
-            </form>
-        </div>
-    </section>
-    
-
-    <!-- Sección de búsqueda de vuelos -->
+    <!-- Sección de búsqueda -->
     <section id="vuelos" class="seccion-busqueda">
-        <div class="form-busqueda1">
-            <h2>Reserva tus vuelos</h2>
-            <p>Encuentra las mejores tarifas para tus destinos favoritos.</p>
+        <div class="titulo-seccion">
+            <h2>Busca tu vuelo</h2>
+            <p>Encuentra las mejores ofertas de vuelos.</p>
         </div>
         <form id="formulario-vuelos" class="formulario-grid">
             <div class="grupo-formulario">
-                <label for="salida">Ciudad de salida</label>
-                <input type="text" id="salida" placeholder="Ciudad de origen" required>
+                <label for="origen">Origen</label>
+                <input type="text" id="origen" placeholder="Ciudad de origen" required>
             </div>
             <div class="grupo-formulario">
-                <label for="destino">Ciudad de destino</label>
+                <label for="destino">Destino</label>
                 <input type="text" id="destino" placeholder="Ciudad de destino" required>
             </div>
             <div class="grupo-formulario">
-                <label for="fecha-ida">Fecha de ida</label>
-                <input type="date" id="fecha-ida" required>
+                <label for="fecha-salida">Fecha de salida</label>
+                <input type="date" id="fecha-salida" required>
             </div>
             <div class="grupo-formulario">
-                <label for="fecha-vuelta">Fecha de vuelta</label>
-                <input type="date" id="fecha-vuelta" required>
+                <label for="fecha-regreso">Fecha de regreso</label>
+                <input type="date" id="fecha-regreso" required>
             </div>
             <button type="submit" class="btn-secundario">Buscar vuelos</button>
         </form>
     </section>
 
-    <!-- Sección de búsqueda de hoteles -->
+    <!-- Sección de hoteles -->
     <section id="hoteles" class="seccion-busqueda">
         <div class="titulo-seccion">
-            <h2>Reserva tu hotel</h2>
-            <p>Selecciona entre una amplia variedad de alojamientos.</p>
+            <h2>Busca tu hotel</h2>
+            <p>Encuentra las mejores ofertas de hoteles.</p>
         </div>
         <form id="formulario-hoteles" class="formulario-grid">
             <div class="grupo-formulario">
@@ -131,33 +101,44 @@
                 <p>Incluye vuelo + hotel + tours en la selva.</p>
                 <button class="btn-primario detalles-plan">Ver detalles</button>
             </div>
-            <div class="plan" data-plan="Familiar">
-                <h3>Plan Familiar</h3>
-                <p>Vacaciones ideales para toda la familia.</p>
-                <button class="btn-primario detalles-plan">Ver detalles</button>
-            </div>
             <div class="plan" data-plan="Relax">
                 <h3>Plan Relax</h3>
-                <p>Desconéctate con un plan todo incluido.</p>
+                <p>Incluye vuelo + hotel + spa.</p>
+                <button class="btn-primario detalles-plan">Ver detalles</button>
+            </div>
+            <div class="plan" data-plan="Cultural">
+                <h3>Plan Cultural</h3>
+                <p>Incluye vuelo + hotel + visitas a museos.</p>
                 <button class="btn-primario detalles-plan">Ver detalles</button>
             </div>
         </div>
     </section>
 
-    <!-- Modal para detalles de planes -->
-    <div id="modal-detalles-plan" class="modal">
-        <div class="contenido-modal">
-            <span class="cerrar">&times;</span>
-            <h3>Detalles del plan</h3>
-            <p id="descripcion-plan">Aquí verás los detalles del plan seleccionado.</p>
-            <button class="btn-secundario">Reservar ahora</button>
+    <!-- Sección de contacto -->
+    <section id="contacto" class="seccion-contacto">
+        <div class="titulo-seccion">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta? Contáctanos.</p>
         </div>
-    </div>
+        <form id="formulario-contacto" class="formulario-grid">
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Tu email" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" placeholder="Tu mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn-secundario">Enviar mensaje</button>
+        </form>
+    </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 TuViaje. Todos los derechos reservados.</p>
-        <p><a href="#privacidad">Política de privacidad</a> | <a href="#terminos">Términos y condiciones</a></p>
     </footer>
 
     <script src="../airbnbF/js/Gscript.js"></script>
