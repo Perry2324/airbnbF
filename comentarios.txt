@@ -1,0 +1,28 @@
+# airbnbF
+
+Proyecto universidad feria 2024-2
+
+## Descripción
+
+Una breve descripción del proyecto, sus objetivos y su propósito.
+
+## Características
+
+- Lista de características principales del proyecto.
+- Característica 1
+- Característica 2
+- Característica 3
+
+## Instalación
+
+Instrucciones sobre cómo instalar y configurar el proyecto localmente.
+
+```sh
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/airbnbF.git
+
+# Navegar al directorio del proyecto
+cd airbnbF
+
+# Instalar dependencias
+npm install
